@@ -1,0 +1,5 @@
+{
+  "tableName": "itemsLambda",
+  "partitionKeyName": "apiID",
+  "partitionKeyType": "S"
+}

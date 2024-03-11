@@ -6,6 +6,12 @@
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/build" />
+      <excludeFolder url="file://$MODULE_DIR$/amplify/backend/api/amplifyyiwukong/build" />
+      <excludeFolder url="file://$MODULE_DIR$/amplify/backend/api/api/build" />
+      <excludeFolder url="file://$MODULE_DIR$/amplify/backend/auth/amplifyyiwukong89a28ad3/build" />
+      <excludeFolder url="file://$MODULE_DIR$/amplify/backend/awscloudformation/build" />
+      <excludeFolder url="file://$MODULE_DIR$/amplify/backend/storage/itemsLambda/build" />
+      <excludeFolder url="file://$MODULE_DIR$/amplify/#current-cloud-backend" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
