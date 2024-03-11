@@ -2,7 +2,12 @@
     "AppSyncApiName": "amplifyyiwukong",
     "DynamoDBBillingMode": "PAY_PER_REQUEST",
     "DynamoDBEnableServerSideEncryption": false,
-    "AuthModeLastUpdated": "2024-02-28T08:43:15.831Z",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
     "S3DeploymentBucket": "amplify-amplifyyiwukong-pro-104016-deployment",
     "S3DeploymentRootKey": "amplify-appsync-files/712c79f980443e2874e1c1bfb9e7f0f8b02ada55"
 }

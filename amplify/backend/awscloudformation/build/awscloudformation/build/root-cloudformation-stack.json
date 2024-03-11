@@ -180,6 +180,71 @@
         }
       }
     },
+    "apiamplifyyiwukong": {
+      "Type": "AWS::CloudFormation::Stack",
+      "Properties": {
+        "TemplateURL": "https://s3.amazonaws.com/amplify-amplifyyiwukong-pro-104016-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "Parameters": {
+          "AppSyncApiName": "amplifyyiwukong",
+          "DynamoDBBillingMode": "PAY_PER_REQUEST",
+          "DynamoDBEnableServerSideEncryption": false,
+          "authRoleName": {
+            "Ref": "AuthRoleName"
+          },
+          "unauthRoleName": {
+            "Ref": "UnauthRoleName"
+          },
+          "S3DeploymentBucket": "amplify-amplifyyiwukong-pro-104016-deployment",
+          "S3DeploymentRootKey": "amplify-appsync-files/712c79f980443e2874e1c1bfb9e7f0f8b02ada55",
+          "env": "pro"
+        }
+      }
+    },
+    "apiapi": {
+      "Type": "AWS::CloudFormation::Stack",
+      "Properties": {
+        "TemplateURL": "https://s3.amazonaws.com/amplify-amplifyyiwukong-pro-104016-deployment/amplify-cfn-templates/api/api-cloudformation-template.json",
+        "Parameters": {
+          "functionapiName": {
+            "Fn::GetAtt": [
+              "functionapi",
+              "Outputs.Name"
+            ]
+          },
+          "functionapiArn": {
+            "Fn::GetAtt": [
+              "functionapi",
+              "Outputs.Arn"
+            ]
+          },
+          "functiontestName": {
+            "Fn::GetAtt": [
+              "functiontest",
+              "Outputs.Name"
+            ]
+          },
+          "functiontestArn": {
+            "Fn::GetAtt": [
+              "functiontest",
+              "Outputs.Arn"
+            ]
+          },
+          "functionapiLambdaName": {
+            "Fn::GetAtt": [
+              "functionapiLambda",
+              "Outputs.Name"
+            ]
+          },
+          "functionapiLambdaArn": {
+            "Fn::GetAtt": [
+              "functionapiLambda",
+              "Outputs.Arn"
+            ]
+          },
+          "env": "pro"
+        }
+      }
+    },
     "authamplifyyiwukong89a28ad3": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
@@ -229,6 +294,84 @@
           },
           "breakCircularDependency": true,
           "dependsOn": "",
+          "env": "pro"
+        }
+      }
+    },
+    "functionapi": {
+      "Type": "AWS::CloudFormation::Stack",
+      "Properties": {
+        "TemplateURL": "https://s3.amazonaws.com/amplify-amplifyyiwukong-pro-104016-deployment/amplify-cfn-templates/function/api-cloudformation-template.json",
+        "Parameters": {
+          "deploymentBucketName": "amplify-amplifyyiwukong-pro-104016-deployment",
+          "s3Key": "amplify-builds/api-43795677554a31656d74-build.zip",
+          "env": "pro"
+        }
+      }
+    },
+    "functionapiLambda": {
+      "Type": "AWS::CloudFormation::Stack",
+      "Properties": {
+        "TemplateURL": "https://s3.amazonaws.com/amplify-amplifyyiwukong-pro-104016-deployment/amplify-cfn-templates/function/apiLambda-cloudformation-template.json",
+        "Parameters": {
+          "deploymentBucketName": "amplify-amplifyyiwukong-pro-104016-deployment",
+          "s3Key": "amplify-builds/apiLambda-644741536a5568463265-build.zip",
+          "storageitemsLambdaName": {
+            "Fn::GetAtt": [
+              "storageitemsLambda",
+              "Outputs.Name"
+            ]
+          },
+          "storageitemsLambdaArn": {
+            "Fn::GetAtt": [
+              "storageitemsLambda",
+              "Outputs.Arn"
+            ]
+          },
+          "env": "pro"
+        }
+      }
+    },
+    "functionlambdaapifunction": {
+      "Type": "AWS::CloudFormation::Stack",
+      "Properties": {
+        "TemplateURL": "https://s3.amazonaws.com/amplify-amplifyyiwukong-pro-104016-deployment/amplify-cfn-templates/function/lambdaapifunction-cloudformation-template.json",
+        "Parameters": {
+          "deploymentBucketName": "amplify-amplifyyiwukong-pro-104016-deployment",
+          "s3Key": "amplify-builds/lambdaapifunction-5236753144536e567064-build.zip",
+          "env": "pro"
+        }
+      }
+    },
+    "functiontest": {
+      "Type": "AWS::CloudFormation::Stack",
+      "Properties": {
+        "TemplateURL": "https://s3.amazonaws.com/amplify-amplifyyiwukong-pro-104016-deployment/amplify-cfn-templates/function/test-cloudformation-template.json",
+        "Parameters": {
+          "deploymentBucketName": "amplify-amplifyyiwukong-pro-104016-deployment",
+          "s3Key": "amplify-builds/test-53674366383335373767-build.zip",
+          "env": "pro"
+        }
+      }
+    },
+    "hostingS3AndCloudFront": {
+      "Type": "AWS::CloudFormation::Stack",
+      "Properties": {
+        "TemplateURL": "https://s3.amazonaws.com/amplify-amplifyyiwukong-pro-104016-deployment/amplify-cfn-templates/hosting/template.json",
+        "Parameters": {
+          "bucketName": "amplifyyiwukong-20240311102359-hostingbucket",
+          "env": "pro"
+        }
+      }
+    },
+    "storageitemsLambda": {
+      "Type": "AWS::CloudFormation::Stack",
+      "Properties": {
+        "TemplateURL": "https://s3.amazonaws.com/amplify-amplifyyiwukong-pro-104016-deployment/amplify-cfn-templates/storage/itemsLambda-cloudformation-template.json",
+        "Parameters": {
+          "tableName": "itemsLambda",
+          "partitionKeyName": "apiID",
+          "partitionKeyType": "S",
           "env": "pro"
         }
       }
