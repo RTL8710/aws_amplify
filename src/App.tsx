@@ -60,7 +60,7 @@ function App() {
                 <HeroLayout2 />
                 <Button variation="primary">hello amplify</Button>
                 {/*<Button variation="menu">hello amplify</Button>*/}
-                <Button
+             {/*   <Button
                     ariaLabel="Add item to cart"
                     backgroundColor="#ffd811"
                     borderRadius="1rem"
@@ -71,7 +71,7 @@ function App() {
                     width="8rem"
                 >
                     Add to Cart
-                </Button>
+                </Button>*/}
                 {/*<a*/}
                 {/*    className="App-link"*/}
                 {/*    href="https://reactjs.org"*/}
