@@ -1,0 +1,10 @@
+{
+  "resourceName": "itemsLambda",
+  "tableName": "itemsLambda",
+  "partitionKey": {
+    "fieldName": "apiID",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}

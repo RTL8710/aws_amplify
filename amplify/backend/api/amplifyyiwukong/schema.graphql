@@ -1,0 +1,19 @@
+type Device @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  deviceID: String
+  devicetype: String
+  Users: [User] @manyToMany(relationName: "DeviceUser")
+}
+
+type User @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  userID: String
+  devices: [Device] @manyToMany(relationName: "DeviceUser")
+}
+
+type Todo @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String!
+  description: String
+}
+ 

@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "paths": {
+    "/api": {
+      "name": "/api",
+      "lambdaFunction": "api",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/test": {
+      "name": "/test",
+      "lambdaFunction": "test",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/apiLambda": {
+      "name": "/apiLambda",
+      "lambdaFunction": "apiLambda",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/apiwithlambdaex": {
+      "name": "/apiwithlambdaex",
+      "lambdaFunction": "apiLambda",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}

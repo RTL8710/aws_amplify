@@ -1,0 +1,112 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-amplifyyiwukong-dev-163626-authRole",
+      "UnauthRoleArn": "arn:aws:iam::196773672762:role/amplify-amplifyyiwukong-dev-163626-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::196773672762:role/amplify-amplifyyiwukong-dev-163626-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-amplifyyiwukong-dev-163626-deployment",
+      "UnauthRoleName": "amplify-amplifyyiwukong-dev-163626-unauthRole",
+      "StackName": "amplify-amplifyyiwukong-dev-163626",
+      "StackId": "arn:aws:cloudformation:us-east-2:196773672762:stack/amplify-amplifyyiwukong-dev-163626/79df4770-d614-11ee-bea6-06dd43c460df",
+      "AmplifyAppId": "d39rn066iwytkt"
+    },
+    "categories": {
+      "analytics": {
+        "Pinpoint": {
+          "Name": "amplifyyiwukong-dev",
+          "Id": "6d7dbada66c4444c9d84d3351d5cb4f6",
+          "Region": "us-east-2"
+        },
+        "amplifyyiwukong": {}
+      },
+      "notifications": {
+        "Pinpoint": {
+          "Name": "amplifyyiwukong-dev",
+          "Id": "6d7dbada66c4444c9d84d3351d5cb4f6",
+          "Region": "us-east-2"
+        }
+      },
+      "auth": {
+        "amplifyyiwukong89a28ad3": {}
+      },
+      "function": {
+        "api": {
+          "deploymentBucketName": "amplify-amplifyyiwukong-dev-163626-deployment",
+          "s3Key": "amplify-builds/api-43795677554a31656d74-build.zip"
+        },
+        "apiLambda": {
+          "deploymentBucketName": "amplify-amplifyyiwukong-dev-163626-deployment",
+          "s3Key": "amplify-builds/apiLambda-644741536a5568463265-build.zip"
+        },
+        "lambdaapifunction": {
+          "deploymentBucketName": "amplify-amplifyyiwukong-dev-163626-deployment",
+          "s3Key": "amplify-builds/lambdaapifunction-6a42327374354c494f67-build.zip"
+        },
+        "test": {
+          "deploymentBucketName": "amplify-amplifyyiwukong-dev-163626-deployment",
+          "s3Key": "amplify-builds/test-53674366383335373767-build.zip"
+        }
+      },
+      "storage": {
+        "itemsLambda": {}
+      },
+      "api": {
+        "amplifyyiwukong": {},
+        "api": {}
+      },
+      "hosting": {
+        "S3AndCloudFront": {}
+      }
+    }
+  },
+  "pro": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-amplifyyiwukong-pro-104016-authRole",
+      "UnauthRoleArn": "arn:aws:iam::196773672762:role/amplify-amplifyyiwukong-pro-104016-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::196773672762:role/amplify-amplifyyiwukong-pro-104016-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-amplifyyiwukong-pro-104016-deployment",
+      "UnauthRoleName": "amplify-amplifyyiwukong-pro-104016-unauthRole",
+      "StackName": "amplify-amplifyyiwukong-pro-104016",
+      "StackId": "arn:aws:cloudformation:us-east-2:196773672762:stack/amplify-amplifyyiwukong-pro-104016/e1782830-df50-11ee-988a-0698d5c0ce03",
+      "AmplifyAppId": "d39rn066iwytkt"
+    },
+    "categories": {
+      "auth": {
+        "amplifyyiwukong89a28ad3": {}
+      },
+      "analytics": {
+        "amplifyyiwukong": {},
+        "Pinpoint": {
+          "Name": "amplifyyiwukong-pro",
+          "Id": "7c054f00429d4cf9b6aee0d1b2a0a567",
+          "Region": "us-east-2"
+        }
+      },
+      "api": {
+        "amplifyyiwukong": {},
+        "api": {}
+      },
+      "function": {
+        "api": {},
+        "apiLambda": {},
+        "lambdaapifunction": {},
+        "test": {}
+      },
+      "hosting": {
+        "S3AndCloudFront": {}
+      },
+      "storage": {
+        "itemsLambda": {}
+      },
+      "notifications": {
+        "Pinpoint": {
+          "Name": "amplifyyiwukong-pro",
+          "Id": "7c054f00429d4cf9b6aee0d1b2a0a567",
+          "Region": "us-east-2"
+        }
+      }
+    }
+  }
+}
