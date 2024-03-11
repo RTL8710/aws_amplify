@@ -33,7 +33,7 @@ function App() {
     return (
         <div className="App">
             <header className="App-header">
-
+                <NavBarHeader2></NavBarHeader2>
                 {/*<NavBarHeader2 Button39493466:PrimitiveOverrideProps<ButtonProps> />*/}
                 {/*<img src={logo} className="App-logo" alt="logo"/>*/}
                 {/*<p>*/}
