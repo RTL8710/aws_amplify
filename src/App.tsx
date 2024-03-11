@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import * as React from 'react';
-import {Button, ButtonProps} from '@aws-amplify/ui-react';
+import {Button, ButtonProps,Image} from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
 
 import {
@@ -80,6 +80,9 @@ function App() {
                 {/*>*/}
                 {/*    Learn React*/}
                 {/*</a>*/}
+                <a href="https://console.aws.amazon.com/amplify/home#/deploy?repo=https://github.com/RTL8710/aws_amplify/tree/main">
+                    <Image alt={"Deploy to Amplify Hosting"} src={"https://oneclick.amplifyapp.com/button.svg"}></Image>
+                </a>
             </header>
         </div>
     );
