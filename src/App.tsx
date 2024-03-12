@@ -7,7 +7,7 @@ import {Button, ButtonProps,Image} from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
 
 import {
-    HeroLayout2,DeviceCreateForm,DeviceList,NavBarHeader,NavBarHeader2
+    HeroLayout2, DeviceCreateForm, DeviceList, NavBarHeader,HeroLayout1, NavBarHeader2, MarketingPricing, Features2x2, CTASection,MarketingFooter
 } from './ui-components';
 
 
@@ -34,52 +34,11 @@ function App() {
         <div className="App">
             <header className="App-header">
                 <NavBarHeader2></NavBarHeader2>
-                {/*<NavBarHeader2 Button39493466:PrimitiveOverrideProps<ButtonProps> />*/}
-                {/*<img src={logo} className="App-logo" alt="logo"/>*/}
-                {/*<p>*/}
-                {/*    test Edit <code>src/App.tsx</code> and save to reload.*/}
-                {/*</p>*/}
-                <Authenticator>
-                    {({ signOut, user }) => (
-                        <main>
-                            {/*<h1>Hello {user.username}</h1>*/}
-                            <button onClick={signOut}>Sign out</button>
-                        </main>
-                    )}
-                </Authenticator>
-
-                {/*<DeviceCreateForm onSuccess/ >*/}
-                <DeviceCreateForm ></DeviceCreateForm>
-
-                {/*    import {*/}
-                {/*    DeviceList*/}
-                {/*} from './ui-components';*/}
-
-                    <DeviceList />
-
-                <HeroLayout2 />
-                <Button variation="primary">hello amplify</Button>
-                {/*<Button variation="menu">hello amplify</Button>*/}
-             {/*   <Button
-                    ariaLabel="Add item to cart"
-                    backgroundColor="#ffd811"
-                    borderRadius="1rem"
-                    color="black"
-                    fontWeight="normal"
-                    onClick={() => alert('Added to cart! ✅')}
-                    size="small"
-                    width="8rem"
-                >
-                    Add to Cart
-                </Button>*/}
-                {/*<a*/}
-                {/*    className="App-link"*/}
-                {/*    href="https://reactjs.org"*/}
-                {/*    target="_blank"*/}
-                {/*    rel="noopener noreferrer"*/}
-                {/*>*/}
-                {/*    Learn React*/}
-                {/*</a>*/}
+                <HeroLayout1></HeroLayout1>
+                <MarketingPricing></MarketingPricing>
+                <Features2x2></Features2x2>
+                <CTASection></CTASection>
+                <MarketingFooter></MarketingFooter>
                 <a href="https://console.aws.amazon.com/amplify/home#/deploy?repo=https://github.com/RTL8710/aws_amplify/tree/main">
                     <Image alt={"Deploy to Amplify Hosting"} src={"https://oneclick.amplifyapp.com/button.svg"}></Image>
                 </a>
