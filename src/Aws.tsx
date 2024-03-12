@@ -28,12 +28,25 @@ function test() {
 
 // let buttonProps = ButtonProps;
 
-function App() {
+function Aws() {
     // @ts-ignore
     return (
-        <div className="App">
+        <div className="Aws">
             <header className="App-header">
-                <NavBarHeader2></NavBarHeader2>
+                <NavBarHeader2  overrides={{
+                    Contact: {
+                        color: "rgba(13,10,38,39)",
+                        children:"Device",
+
+                    },
+                    Button39493466:{
+                        children: "Register",
+                        variation:"warning",
+                        onClick: () => alert(`Saving forms`)
+                        // onClick: () => <a href="Aws"></a>
+                    }
+
+                }}/>
                 {/*<NavBarHeader2 Button39493466:PrimitiveOverrideProps<ButtonProps> />*/}
                 {/*<img src={logo} className="App-logo" alt="logo"/>*/}
                 {/*<p>*/}
@@ -49,7 +62,12 @@ function App() {
                 </Authenticator>
 
                 {/*<DeviceCreateForm onSuccess/ >*/}
-                <DeviceCreateForm ></DeviceCreateForm>
+                <DeviceCreateForm   onSubmit={fields =>{
+                    // alert(fields.deviceID)
+                    console.log(fields);
+                    return fields;
+                }
+                }></DeviceCreateForm>
 
                 {/*    import {*/}
                 {/*    DeviceList*/}
@@ -80,12 +98,12 @@ function App() {
                 {/*>*/}
                 {/*    Learn React*/}
                 {/*</a>*/}
-                <a href="https://console.aws.amazon.com/amplify/home#/deploy?repo=https://github.com/RTL8710/aws_amplify/tree/main">
-                    <Image alt={"Deploy to Amplify Hosting"} src={"https://oneclick.amplifyapp.com/button.svg"}></Image>
-                </a>
+                {/*<a href="https://console.aws.amazon.com/amplify/home#/deploy?repo=https://github.com/RTL8710/aws_amplify/tree/main">*/}
+                {/*    <Image alt={"Deploy to Amplify Hosting"} src={"https://oneclick.amplifyapp.com/button.svg"}></Image>*/}
+                {/*</a>*/}
             </header>
         </div>
     );
 }
 
-export default App;
+export default Aws;

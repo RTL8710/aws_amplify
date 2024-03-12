@@ -32,17 +32,30 @@ function App() {
     // @ts-ignore
     return (
         <div className="App">
-            <header className="App-header">
-                <NavBarHeader2></NavBarHeader2>
+            {/*<header className="App-header">*/}
+                <NavBarHeader2  overrides={{
+                    Contact: {
+                        color: "rgba(13,10,38,39)",
+                        children:"Device",
+
+                    },
+                    Button39493466:{
+                        children: "Register",
+                        variation:"warning",
+                        onClick: () => alert(`Saving forms`)
+                        // onClick: () => <a href="Aws"></a>
+                    }
+
+                }}/>
                 <HeroLayout1></HeroLayout1>
                 <MarketingPricing></MarketingPricing>
                 <Features2x2></Features2x2>
                 <CTASection></CTASection>
                 <MarketingFooter></MarketingFooter>
-                <a href="https://console.aws.amazon.com/amplify/home#/deploy?repo=https://github.com/RTL8710/aws_amplify/tree/main">
-                    <Image alt={"Deploy to Amplify Hosting"} src={"https://oneclick.amplifyapp.com/button.svg"}></Image>
-                </a>
-            </header>
+
+
+
+            {/*</header>*/}
         </div>
     );
 }

@@ -1,5 +1,5 @@
 {
-  "Description": "Root Stack for AWS Amplify CLI",
+  "Description": "Root Stack for AWS Amplify Console",
   "AWSTemplateFormatVersion": "2010-09-09",
   "Parameters": {
     "DeploymentBucketName": {
@@ -155,7 +155,7 @@
     "analyticsamplifyyiwukong": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-amplifyyiwukong-pro-104016-deployment/amplify-cfn-templates/analytics/pinpoint-cloudformation-template.json",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-amplifyyiwukong-dev-163626-deployment/amplify-cfn-templates/analytics/pinpoint-cloudformation-template.json",
         "Parameters": {
           "appName": "amplifyyiwukong",
           "roleName": "pinpointLambdaRoled7829ebd",
@@ -176,14 +176,14 @@
               "Arn"
             ]
           },
-          "env": "pro"
+          "env": "dev"
         }
       }
     },
     "apiamplifyyiwukong": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-amplifyyiwukong-pro-104016-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-amplifyyiwukong-dev-163626-deployment/amplify-cfn-templates/api/cloudformation-template.json",
         "Parameters": {
           "AppSyncApiName": "amplifyyiwukong",
           "DynamoDBBillingMode": "PAY_PER_REQUEST",
@@ -194,16 +194,16 @@
           "unauthRoleName": {
             "Ref": "UnauthRoleName"
           },
-          "S3DeploymentBucket": "amplify-amplifyyiwukong-pro-104016-deployment",
+          "S3DeploymentBucket": "amplify-amplifyyiwukong-dev-163626-deployment",
           "S3DeploymentRootKey": "amplify-appsync-files/712c79f980443e2874e1c1bfb9e7f0f8b02ada55",
-          "env": "pro"
+          "env": "dev"
         }
       }
     },
     "apiapi": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-amplifyyiwukong-pro-104016-deployment/amplify-cfn-templates/api/api-cloudformation-template.json",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-amplifyyiwukong-dev-163626-deployment/amplify-cfn-templates/api/api-cloudformation-template.json",
         "Parameters": {
           "functionapiName": {
             "Fn::GetAtt": [
@@ -241,14 +241,14 @@
               "Outputs.Arn"
             ]
           },
-          "env": "pro"
+          "env": "dev"
         }
       }
     },
     "authamplifyyiwukong89a28ad3": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-amplifyyiwukong-pro-104016-deployment/amplify-cfn-templates/auth/amplifyyiwukong89a28ad3-cloudformation-template.json",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-amplifyyiwukong-dev-163626-deployment/amplify-cfn-templates/auth/amplifyyiwukong89a28ad3-cloudformation-template.json",
         "Parameters": {
           "identityPoolName": "amplifyyiwukong89a28ad3_identitypool_89a28ad3",
           "allowUnauthenticatedIdentities": true,
@@ -294,27 +294,27 @@
           },
           "breakCircularDependency": true,
           "dependsOn": "",
-          "env": "pro"
+          "env": "dev"
         }
       }
     },
     "functionapi": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-amplifyyiwukong-pro-104016-deployment/amplify-cfn-templates/function/api-cloudformation-template.json",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-amplifyyiwukong-dev-163626-deployment/amplify-cfn-templates/function/api-cloudformation-template.json",
         "Parameters": {
-          "deploymentBucketName": "amplify-amplifyyiwukong-pro-104016-deployment",
+          "deploymentBucketName": "amplify-amplifyyiwukong-dev-163626-deployment",
           "s3Key": "amplify-builds/api-43795677554a31656d74-build.zip",
-          "env": "pro"
+          "env": "dev"
         }
       }
     },
     "functionapiLambda": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-amplifyyiwukong-pro-104016-deployment/amplify-cfn-templates/function/apiLambda-cloudformation-template.json",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-amplifyyiwukong-dev-163626-deployment/amplify-cfn-templates/function/apiLambda-cloudformation-template.json",
         "Parameters": {
-          "deploymentBucketName": "amplify-amplifyyiwukong-pro-104016-deployment",
+          "deploymentBucketName": "amplify-amplifyyiwukong-dev-163626-deployment",
           "s3Key": "amplify-builds/apiLambda-644741536a5568463265-build.zip",
           "storageitemsLambdaName": {
             "Fn::GetAtt": [
@@ -328,51 +328,51 @@
               "Outputs.Arn"
             ]
           },
-          "env": "pro"
+          "env": "dev"
         }
       }
     },
     "functionlambdaapifunction": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-amplifyyiwukong-pro-104016-deployment/amplify-cfn-templates/function/lambdaapifunction-cloudformation-template.json",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-amplifyyiwukong-dev-163626-deployment/amplify-cfn-templates/function/lambdaapifunction-cloudformation-template.json",
         "Parameters": {
-          "deploymentBucketName": "amplify-amplifyyiwukong-pro-104016-deployment",
-          "s3Key": "amplify-builds/lambdaapifunction-5236753144536e567064-build.zip",
-          "env": "pro"
+          "deploymentBucketName": "amplify-amplifyyiwukong-dev-163626-deployment",
+          "s3Key": "amplify-builds/lambdaapifunction-6a42327374354c494f67-build.zip",
+          "env": "dev"
         }
       }
     },
     "functiontest": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-amplifyyiwukong-pro-104016-deployment/amplify-cfn-templates/function/test-cloudformation-template.json",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-amplifyyiwukong-dev-163626-deployment/amplify-cfn-templates/function/test-cloudformation-template.json",
         "Parameters": {
-          "deploymentBucketName": "amplify-amplifyyiwukong-pro-104016-deployment",
+          "deploymentBucketName": "amplify-amplifyyiwukong-dev-163626-deployment",
           "s3Key": "amplify-builds/test-53674366383335373767-build.zip",
-          "env": "pro"
+          "env": "dev"
         }
       }
     },
     "hostingS3AndCloudFront": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-amplifyyiwukong-pro-104016-deployment/amplify-cfn-templates/hosting/template.json",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-amplifyyiwukong-dev-163626-deployment/amplify-cfn-templates/hosting/template.json",
         "Parameters": {
           "bucketName": "amplifyyiwukong-20240311102359-hostingbucket",
-          "env": "pro"
+          "env": "dev"
         }
       }
     },
     "storageitemsLambda": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-amplifyyiwukong-pro-104016-deployment/amplify-cfn-templates/storage/itemsLambda-cloudformation-template.json",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-amplifyyiwukong-dev-163626-deployment/amplify-cfn-templates/storage/itemsLambda-cloudformation-template.json",
         "Parameters": {
           "tableName": "itemsLambda",
           "partitionKeyName": "apiID",
           "partitionKeyType": "S",
-          "env": "pro"
+          "env": "dev"
         }
       }
     },

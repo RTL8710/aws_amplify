@@ -1,5 +1,5 @@
 {
-  "Description": "{\"createdOn\":\"Mac\",\"createdBy\":\"Amplify\",\"createdWith\":\"12.10.1\",\"stackType\":\"api-API Gateway\",\"metadata\":{}}",
+  "Description": "API Gateway Resource for AWS Amplify CLI",
   "AWSTemplateFormatVersion": "2010-09-09",
   "Parameters": {
     "functionapiName": {
@@ -1014,7 +1014,7 @@
         "Name": "api"
       }
     },
-    "apiDefault4XXResponseeca3d44e": {
+    "apiDefault4XXResponse34a14507": {
       "Type": "AWS::ApiGateway::GatewayResponse",
       "Properties": {
         "ResponseType": "DEFAULT_4XX",
@@ -1029,7 +1029,7 @@
         }
       }
     },
-    "apiDefault5XXResponseeca3d44e": {
+    "apiDefault5XXResponse34a14507": {
       "Type": "AWS::ApiGateway::GatewayResponse",
       "Properties": {
         "ResponseType": "DEFAULT_5XX",
@@ -1044,7 +1044,7 @@
         }
       }
     },
-    "DeploymentAPIGWapi593b4145": {
+    "DeploymentAPIGWapief409e21": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -1062,8 +1062,8 @@
         }
       },
       "DependsOn": [
-        "apiDefault4XXResponseeca3d44e",
-        "apiDefault5XXResponseeca3d44e"
+        "apiDefault4XXResponse34a14507",
+        "apiDefault5XXResponse34a14507"
       ]
     }
   }

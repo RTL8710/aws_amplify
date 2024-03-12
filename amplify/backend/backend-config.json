@@ -159,6 +159,70 @@
         }
       ]
     },
+    "AMPLIFY_function_apiLambda_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "apiLambda"
+        }
+      ]
+    },
+    "AMPLIFY_function_apiLambda_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "apiLambda"
+        }
+      ]
+    },
+    "AMPLIFY_function_api_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "api"
+        }
+      ]
+    },
+    "AMPLIFY_function_api_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "api"
+        }
+      ]
+    },
+    "AMPLIFY_function_lambdaapifunction_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "lambdaapifunction"
+        }
+      ]
+    },
+    "AMPLIFY_function_lambdaapifunction_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "lambdaapifunction"
+        }
+      ]
+    },
+    "AMPLIFY_function_test_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "test"
+        }
+      ]
+    },
+    "AMPLIFY_function_test_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "test"
+        }
+      ]
+    },
     "AMPLIFY_notifications_Pinpoint_Id": {
       "usedBy": [
         {

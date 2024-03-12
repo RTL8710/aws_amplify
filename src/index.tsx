@@ -11,6 +11,7 @@ import awsconfig from './aws-exports';
 
 import "@aws-amplify/ui-react/styles.css";
 import { studioTheme } from "./ui-components";
+import Aws from "./Aws";
 
 Amplify.configure(awsconfig);
 
@@ -18,11 +19,12 @@ const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-  <React.StrictMode>
+  // <React.StrictMode>
       <ThemeProvider theme={studioTheme}>
-          <App />
+          <Aws />
+          {/*<App />*/}
       </ThemeProvider>
-  </React.StrictMode>
+  // </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
