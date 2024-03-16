@@ -138,7 +138,8 @@ export default function NavBarHeader2(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children="Pricing"
+          // children="Pricing"
+          children="Pricings"
           {...getOverrideProps(overrides, "Pricing")}
         ></Text>
         <Text

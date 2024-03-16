@@ -47,7 +47,8 @@ function App() {
                     }
 
                 }}/>
-                <HeroLayout1></HeroLayout1>
+
+                <HeroLayout2></HeroLayout2>
                 <MarketingPricing></MarketingPricing>
                 <Features2x2></Features2x2>
                 <CTASection></CTASection>

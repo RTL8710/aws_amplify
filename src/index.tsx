@@ -21,8 +21,8 @@ const root = ReactDOM.createRoot(
 root.render(
   // <React.StrictMode>
       <ThemeProvider theme={studioTheme}>
-          <Aws />
-          {/*<App />*/}
+          {/*<Aws />*/}
+          <App />
       </ThemeProvider>
   // </React.StrictMode>
 );

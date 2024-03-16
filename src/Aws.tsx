@@ -3,18 +3,19 @@ import logo from './logo.svg';
 import './App.css';
 
 import * as React from 'react';
-import {Button, ButtonProps,Image} from '@aws-amplify/ui-react';
+import {Button, ButtonProps, Image} from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
 
 import {
-    HeroLayout2,DeviceCreateForm,DeviceList,NavBarHeader,NavBarHeader2
+    HeroLayout2, DeviceCreateForm, DeviceList, NavBarHeader, NavBarHeader2, ProductCard
 } from './ui-components';
 
 
-import { Authenticator } from '@aws-amplify/ui-react';
+import {Authenticator} from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
 import {DeviceCreateFormInputValues} from "./ui-components/DeviceCreateForm";
 import {PrimitiveOverrideProps} from "./ui-components/NavBarHeader2";
+import ActionCard from "./ui-components/ActionCard";
 
 // import awsExports from './aws-exports';
 // Amplify.configure(awsExports);
@@ -33,27 +34,29 @@ function Aws() {
     return (
         <div className="Aws">
             <header className="App-header">
-                <NavBarHeader2  overrides={{
+                <NavBarHeader2 overrides={{
                     Contact: {
                         color: "rgba(13,10,38,39)",
-                        children:"Device",
+                        children: "Device",
 
                     },
-                    Button39493466:{
+                    Button39493466: {
                         children: "Register",
-                        variation:"warning",
+                        variation: "warning",
                         onClick: () => alert(`Saving forms`)
                         // onClick: () => <a href="Aws"></a>
                     }
 
                 }}/>
+                <ActionCard />
                 {/*<NavBarHeader2 Button39493466:PrimitiveOverrideProps<ButtonProps> />*/}
                 {/*<img src={logo} className="App-logo" alt="logo"/>*/}
                 {/*<p>*/}
                 {/*    test Edit <code>src/App.tsx</code> and save to reload.*/}
                 {/*</p>*/}
+                <ProductCard></ProductCard>
                 <Authenticator>
-                    {({ signOut, user }) => (
+                    {({signOut, user}) => (
                         <main>
                             {/*<h1>Hello {user.username}</h1>*/}
                             <button onClick={signOut}>Sign out</button>
@@ -62,7 +65,11 @@ function Aws() {
                 </Authenticator>
 
                 {/*<DeviceCreateForm onSuccess/ >*/}
-                <DeviceCreateForm   onSubmit={fields =>{
+                <DeviceCreateForm onSubmit={fields => {
+                    alert(fields.deviceID)
+                    // console.log(fields);
+                    return fields;
+                }} onChange={fields => {
                     // alert(fields.deviceID)
                     console.log(fields);
                     return fields;
@@ -73,12 +80,12 @@ function Aws() {
                 {/*    DeviceList*/}
                 {/*} from './ui-components';*/}
 
-                    <DeviceList />
+                <DeviceList/>
 
-                <HeroLayout2 />
+                <HeroLayout2/>
                 <Button variation="primary">hello amplify</Button>
                 {/*<Button variation="menu">hello amplify</Button>*/}
-             {/*   <Button
+                {/*   <Button
                     ariaLabel="Add item to cart"
                     backgroundColor="#ffd811"
                     borderRadius="1rem"
